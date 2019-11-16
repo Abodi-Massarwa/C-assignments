@@ -2,7 +2,7 @@
 CC=gcc
 OBJECTS_MAIN=main.o
 FLAGS= -Wall -g
-OBJECTS_POWER_MYMATH=myMath.o power.o
+OBJECTS_POWER_MYMATH=basicMath.o power.o
 
 all: maind mains
 	 
@@ -18,8 +18,8 @@ mains: $(OBJECTS_MAIN) mymaths
 mymaths: $(OBJECTS_POWER_MYMATH)
 	ar rc libmyMath.a $(OBJECTS_POWER_MYMATH)
 
-myMath.o: myMath.c
-	$(CC) $(FLAGS) -fPIC -c myMath.c
+basicMath.o: basicMath.c
+	$(CC) $(FLAGS) -fPIC -c basicMath.c
 
 power.o: power.c
 	$(CC) $(FLAGS) -fPIC -c power.c
