@@ -24,7 +24,7 @@ basicMath.o: basicMath.c
 power.o: power.c
 	$(CC) $(FLAGS) -fPIC -c power.c
 
-$(OBJECTS_MAIN): main.c
+$(OBJECTS_MAIN): main.c myMath.h
 	$(CC) $(FLAGS) -fPIC -c main.c 
 
 .PHONY: clean all
